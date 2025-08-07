@@ -17,81 +17,45 @@
   ## 🛠️ Installation
   
   1. Clone or create the project:
-  \`\`\`bash
-  # If cloning from a repository
-  git clone <repository-url>
-  cd historical-timing-periods
-  
-  # Or create the project structure manually using the provided files
-  \`\`\`
+  ```bash
+   git clone https://github.com/Atash03/historical-timing-periods.git
+  ```
   
   2. Install dependencies:
-  \`\`\`bash
-  pnpm install
-  \`\`\`
+  ```bash
+   pnpm install
+  ```
   
   ## 🔧 Development
   
   Start the development server:
-  \`\`\`bash
-  pnpm dev
-  \`\`\`
-  
+  ```bash
+   pnpm dev
+  ```
+
   The application will open at [http://localhost:3000](http://localhost:3000) with hot reload enabled.
   
   ## 🏗️ Building
   
   Create a production build:
-  \`\`\`bash
-  pnpm build
-  \`\`\`
+  ```bash
+   pnpm build
+  ```
   
   Create a development build:
-  \`\`\`bash
-  pnpm build:dev
-  \`\`\`
-  
-  ## 🧹 Code Quality
-  
-  ### Linting
-  \`\`\`bash
-  # Check for linting issues
-  pnpm lint
-  
-  # Fix linting issues automatically
-  pnpm lint:fix
-  \`\`\`
-  
-  ### Formatting
-  \`\`\`bash
-  # Check formatting
-  pnpm format
-  
-  # Fix formatting issues
-  pnpm format:fix
-  \`\`\`
-  
-  ### All-in-one check
-  \`\`\`bash
-  # Check and fix both linting and formatting
-  pnpm check:fix
-  \`\`\`
-  
-  ### Type Checking
-  \`\`\`bash
-  # Run TypeScript type checking
-  pnpm type-check
-  \`\`\`
-  
+  ```bash
+   pnpm build:dev
+  ```
+
   ## 📝 Available Scripts
   
-  - \`pnpm dev\` - Start development server
-  - \`pnpm build\` - Build for production
-  - \`pnpm build:dev\` - Build for development
-  - \`pnpm lint\` - Run linter
-  - \`pnpm lint:fix\` - Fix linting issues
-  - \`pnpm format\` - Check formatting
-  - \`pnpm format:fix\` - Fix formatting
-  - \`pnpm check\` - Run all checks
-  - \`pnpm check:fix\` - Fix all issues
-  - \`pnpm type-check\` - Run TypeScript checks
+  - `pnpm dev` - Start development server
+  - `pnpm build` - Build for production
+  - `pnpm build:dev` - Build for development
+  - `pnpm lint` - Run linter
+  - `pnpm lint:fix` - Fix linting issues
+  - `pnpm format` - Check formatting
+  - `pnpm format:fix` - Fix formatting
+  - `pnpm check` - Run all checks
+  - `pnpm check:fix` - Fix all issues
+  - `pnpm type-check` - Run TypeScript checks
