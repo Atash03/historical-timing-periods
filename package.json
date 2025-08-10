@@ -7,12 +7,12 @@
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "lint": "biome lint src/",
-    "lint:fix": "biome lint --apply src/",
-    "format": "biome format src/",
-    "format:fix": "biome format --write src/",
-    "check": "biome check src/",
-    "check:fix": "biome check --apply src/",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --apply ./src",
+    "format": "biome format ./src",
+    "format:fix": "biome format --write ./src",
+    "check": "biome check ./src",
+    "check:fix": "biome check --apply ./src",
     "type-check": "tsc --noEmit",
     "prepare": "husky"
   },
@@ -26,8 +26,10 @@
   "author": "Atash03",
   "license": "MIT",
   "dependencies": {
+    "gsap": "^3.13.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
@@ -37,6 +39,9 @@
     "html-webpack-plugin": "^5.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.2.4",
     "sass": "^1.77.0",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",

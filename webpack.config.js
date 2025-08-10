@@ -30,15 +30,36 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.scss$/,
-                    use: ['style-loader', 'css-loader', {
-                        loader: 'sass-loader',
+                    use: ['style-loader', {
+                        loader: 'css-loader',
                         options: {
-                            api: 'modern-compiler',
-                            sassOptions: {
-                                silenceDeprecations: ['legacy-js-api'],
+                            modules: {
+                                auto: true,
+                                localIdentName: '[name]__[local]--[hash:base64:5]',
+                                namedExport: false,
                             },
                         },
-                    },],
+                    },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                postcssOptions: {
+                                    plugins: [
+                                        [
+                                            "postcss-preset-env",
+                                        ],
+                                    ],
+                                },
+                            },
+                        }, {
+                            loader: 'sass-loader',
+                            options: {
+                                api: 'modern-compiler',
+                                sassOptions: {
+                                    silenceDeprecations: ['legacy-js-api'],
+                                },
+                            },
+                        }],
                 },
                 {
                     test: /\.css$/,

@@ -1,0 +1,8 @@
+@use "@/shared/styles/vars" as *;
+
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 1.5rem !important;
+}

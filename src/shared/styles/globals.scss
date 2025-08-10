@@ -1,22 +1,39 @@
+@use "./fonts";
 @use "./vars" as *;
 
 // Global styles
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "PT Sans", sans-serif,
-        "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.6;
-    color: $text-color;
+  font-family: "PT Sans", sans-serif, "Bebas Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: $text-color;
 }
 
 #root {
-    min-height: 100vh;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+.swiper-slide {
+  max-width: 50vw;
+  opacity: 0.5;
+}
+
+.swiper-slide:last-child {
+  max-width: 5vw;
+}
+
+.swiper-slide-active {
+  opacity: 1;
 }

@@ -1,14 +1,40 @@
-@use "../shared/styles/vars" as *;
+@use "@/shared/styles/vars" as *;
 
-h1 {
-    font-size: 2.5rem;
-    color: $primary-color;
-    margin-bottom: 1rem;
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.7rem 0 clamp(0.8rem, 4vw, 6.5rem) 0;
 }
 
-p {
-    font-size: 1.2rem;
-    color: $secondary-color;
-    font-family: $font-bebas;
-    line-height: 1.5;
+.titleContainer {
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: clamp(1.25rem, 5vw, 3.5rem);
+  line-height: 120%;
+  width: min(22rem, 7.7rem);
+}
+
+.years {
+  display: flex;
+  gap: max(7vw, 2rem);
+  width: fit-content;
+}
+
+.sliderContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: $line-color;
 }

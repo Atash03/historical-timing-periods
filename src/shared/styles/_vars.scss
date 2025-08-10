@@ -1,7 +1,14 @@
 // Variables
-$primary-color: #5D5FEF;
-$secondary-color: #EF5DA8;
+$primary-blue: #5D5FEF;
+$primary-pink: #EF5DA8;
+$secondary-blue: #3877EE;
 $text-color: #42567A;
 $border-color: #303E58;
+$line-color: #C7CDD9;
 $font-bebas: 'Bebas Neue', sans-serif;
 $transition: all 0.3s ease;
+
+// Breakpoints
+$md: 48rem;
+$lg: 64rem;
+$xl: 80rem;

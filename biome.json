@@ -11,7 +11,8 @@
                 "noNonNullAssertion": "off"
             },
             "suspicious": {
-                "noExplicitAny": "warn"
+                "noExplicitAny": "warn",  
+                "noArrayIndexKey": "warn"              
             }
         }
     },
@@ -27,7 +28,6 @@
         "formatter": {
             "jsxQuoteStyle": "double",
             "quoteProperties": "asNeeded",
-            "trailingComma": "es5",
             "semicolons": "always",
             "arrowParentheses": "always",
             "bracketSpacing": true,
