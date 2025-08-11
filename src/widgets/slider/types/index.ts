@@ -1,5 +1,5 @@
-import type { SliderItemProps } from '@/entities/slider-item';
+import type { Period } from '@/shared/types';
 
 export interface SliderProps {
-  items: SliderItemProps[];
+  items: Period[];
 }

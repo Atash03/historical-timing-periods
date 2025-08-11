@@ -19,22 +19,3 @@
   line-height: 120%;
   width: min(22rem, 7.7rem);
 }
-
-.years {
-  display: flex;
-  gap: max(7vw, 2rem);
-  width: fit-content;
-}
-
-.sliderContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.line {
-    height: 1px;
-    width: 100%;
-    background-color: $line-color;
-}

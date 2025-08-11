@@ -24,16 +24,3 @@ body {
   width: 100%;
   padding: 0 1.25rem;
 }
-
-.swiper-slide {
-  max-width: 50vw;
-  opacity: 0.5;
-}
-
-.swiper-slide:last-child {
-  max-width: 5vw;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-}
