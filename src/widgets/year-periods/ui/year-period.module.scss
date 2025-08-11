@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.years {
+  display: flex;
+  gap: max(7vw, 2rem);
+  width: fit-content;
+}

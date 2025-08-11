@@ -11,8 +11,11 @@
                 "noNonNullAssertion": "off"
             },
             "suspicious": {
-                "noExplicitAny": "warn",  
-                "noArrayIndexKey": "warn"              
+                "noExplicitAny": "warn",
+                "noArrayIndexKey": "warn"
+            },
+            "a11y": {
+                "useKeyWithClickEvents": "off"
             }
         }
     },
