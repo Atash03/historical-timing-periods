@@ -26,7 +26,9 @@ export function Slider() {
         ease: 'power2.in',
         onComplete: () => {
           setDisplayedPeriods(activeValue.periods);
-          gsap.set([swiperWrapperRef.current, containerRef.current], { y: 20 });
+          if (swiperWrapperRef.current && containerRef.current) {
+            gsap.set([swiperWrapperRef.current, containerRef.current], { y: 20 });
+          }
         },
       }).to([swiperWrapperRef.current, containerRef.current], {
         y: 0,

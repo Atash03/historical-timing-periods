@@ -15,12 +15,12 @@ body {
   line-height: 1.6;
   color: $text-color;
   background-color: $main-bg-color;
-  height: 100vh;
-  overflow: hidden;
 
   @media (min-width: $max-width) {
     display: flex;
     justify-content: center;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 

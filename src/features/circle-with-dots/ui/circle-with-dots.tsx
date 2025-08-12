@@ -78,6 +78,7 @@ export const CircleWithDots = ({ numberOfDots }: CircleWithDotsProps) => {
 
     dots.push(
       <div
+        key={i}
         ref={(el) => dotRefs.current.set(i, el)}
         className={dotClass}
         onClick={() => goToYear(i)}
