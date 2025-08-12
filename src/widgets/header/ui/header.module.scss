@@ -2,10 +2,12 @@
 
 .titleContainer {
     width: 100%;
+    flex: 1;
 
     @media (min-width: $xl) {
         display: flex;
         align-items: stretch;
+        flex: none;
     }
 }
 

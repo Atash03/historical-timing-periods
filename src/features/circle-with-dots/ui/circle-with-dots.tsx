@@ -57,6 +57,8 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
 
   useEffect(() => {
     dotLabelRefs.current.forEach((label, i) => {
+      gsap.killTweensOf(label);
+
       if (i === activeIndex) {
         gsap.to(label, {
           opacity: 1,

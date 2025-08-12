@@ -18,7 +18,7 @@ export function NavControls() {
             onClick={previousYears}
             disabled={activeIndex === 0}
           >
-            <CaretIcon direction="left" />
+            <CaretIcon direction="left" classname={scss.caretIcon} />
           </button>
           <button
             type="button"
@@ -26,7 +26,7 @@ export function NavControls() {
             onClick={nextYears}
             disabled={activeIndex === length - 1}
           >
-            <CaretIcon direction="right" />
+            <CaretIcon direction="right" classname={scss.caretIcon} />
           </button>
         </div>
       </div>

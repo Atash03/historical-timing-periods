@@ -41,6 +41,17 @@
   &:hover {
     border-color: rgba($text-color, 1);
   }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.caretIcon {
+  @media (min-width: $md) {
+    width: 10.25px;
+    height: 12.25px !important;
+  }
 }
 
 .pagintionBullet {

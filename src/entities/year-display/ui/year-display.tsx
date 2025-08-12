@@ -1,30 +1,39 @@
 import { gsap } from 'gsap';
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type { YearDisplayProps } from '../types';
 import scss from './year-display.module.scss';
 
 export function YearDisplay({ color, year }: YearDisplayProps) {
   const yearRef = useRef<HTMLHeadingElement>(null);
+  const prevYearRef = useRef(year);
   const digits = String(year).split('');
 
-  useLayoutEffect(() => {
-    const digitElements = yearRef.current?.querySelectorAll(`.${scss.digit}`);
-    if (digitElements) {
-      digitElements.forEach((el, i) => gsap.set(el, i % 2 === 0 ? { y: '-100%' } : { y: '100%' }));
-    }
-  }, []);
-
   useEffect(() => {
+    const currentDigits = String(year).split('');
+    const prevDigits = String(prevYearRef.current).split('');
     const digitElements = yearRef.current?.querySelectorAll(`.${scss.digit}`);
+
     if (digitElements) {
-      gsap.to(digitElements, {
-        y: '0%',
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.05,
+      digitElements.forEach((el, i) => {
+        const currentDigit = currentDigits[i];
+        const prevDigit = prevDigits[i];
+
+        if (currentDigit !== prevDigit) {
+          gsap.from(el, {
+            innerText: prevDigit,
+            duration: 0.8,
+            snap: {
+              innerText: 1,
+            },
+            ease: 'power3.out',
+            delay: i * 0.05,
+          });
+        }
       });
     }
-  }, []);
+
+    prevYearRef.current = year;
+  }, [year]);
 
   return (
     <h1 ref={yearRef} className={`${scss.year} ${scss[color]}`}>
