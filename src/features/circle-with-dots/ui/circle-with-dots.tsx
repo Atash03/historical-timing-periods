@@ -1,3 +1,4 @@
+import { useData } from '@/providers/data-provider';
 import { gsap } from 'gsap';
 import type React from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -5,7 +6,7 @@ import type { CircleWithDotsProps } from '../types';
 import scss from './circle-with-dots.module.scss';
 
 export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const { activeIndex, goToYear } = useData();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const dotsContainerRef = useRef(null);
 
@@ -13,7 +14,7 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
   const angleStep = 360 / numberOfDots;
   const initialAngle = 300;
 
-  const selectedDotAngle = initialAngle + angleStep * selectedIndex;
+  const selectedDotAngle = initialAngle + angleStep * activeIndex;
   const rotationAngle = -selectedDotAngle + 300;
 
   useEffect(() => {
@@ -48,15 +49,15 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
       gsap.to(dot, {
         x: x,
         y: y,
-        rotation: angleStep * selectedIndex,
+        rotation: angleStep * activeIndex,
         duration: 0,
       });
     });
-  }, [getClampedRadius, angleStep, selectedIndex]);
+  }, [getClampedRadius, angleStep, activeIndex]);
 
   useEffect(() => {
     dotLabelRefs.current.forEach((label, i) => {
-      if (i === selectedIndex) {
+      if (i === activeIndex) {
         gsap.to(label, {
           opacity: 1,
           duration: 0.5,
@@ -70,11 +71,11 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
         });
       }
     });
-  }, [selectedIndex]);
+  }, [activeIndex]);
 
   for (let i = 0; i < numberOfDots; i++) {
     let dotClass = scss.dot;
-    if (i === selectedIndex) {
+    if (i === activeIndex) {
       dotClass = scss.mainDot;
     } else if (i === hoveredIndex) {
       dotClass = scss.activeDot;
@@ -84,11 +85,11 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
       <div
         ref={(el) => dotRefs.current.set(i, el)}
         className={dotClass}
-        onClick={() => setSelectedIndex(i)}
+        onClick={() => goToYear(i)}
         onMouseEnter={() => setHoveredIndex(i)}
         onMouseLeave={() => setHoveredIndex(null)}
       >
-        {(i === selectedIndex || i === hoveredIndex) && <span className={scss.dotIndex}>{i}</span>}
+        {(i === activeIndex || i === hoveredIndex) && <span className={scss.dotIndex}>{i}</span>}
         <span ref={(el) => dotLabelRefs.current.set(i, el)} className={scss.dotLabel}>
           {i}
         </span>

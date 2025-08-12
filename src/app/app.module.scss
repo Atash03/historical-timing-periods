@@ -12,34 +12,6 @@
   position: relative;
 }
 
-.titleContainer {
-  width: 100%;
-
-  @media (min-width: $xl) {
-    display: flex;
-    align-items: stretch;
-  }
-}
-
-.title {
-  font-weight: bold;
-  font-size: clamp(1.25rem, 5vw, 3.5rem);
-  line-height: 120%;
-  width: min(22rem, 7.7rem);
-}
-
-.titleLine {
-  display: none;
-
-  @media (min-width: $xl) {
-    display: inline-block;
-    position: relative;
-    left: -5rem;
-    width: 4px;
-    background: linear-gradient(to bottom, #3877ee, #ef5da8);
-  }
-}
-
 .line {
   display: none;
 

@@ -7,8 +7,11 @@ import type { SliderProps } from '../types';
 import scss from './slider.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useData } from '@/providers/data-provider';
 
 export function Slider({ items }: SliderProps) {
+  const { activeValue, activeIndex } = useData();
+
   return (
     <article className={`${scss.container}`}>
       <div className="container">
@@ -17,6 +20,7 @@ export function Slider({ items }: SliderProps) {
       <div className={scss.sliderContainer}>
         <div className={scss.swiperWrapper}>
           <Swiper
+            key={activeIndex}
             slidesPerView={'auto'}
             spaceBetween={25}
             freeMode={true}
@@ -31,7 +35,7 @@ export function Slider({ items }: SliderProps) {
               },
             }}
           >
-            {items.map((el) => (
+            {activeValue.periods.map((el) => (
               <SwiperSlide key={el.year}>
                 <SliderItem year={el.year} content={el.content} />
               </SwiperSlide>

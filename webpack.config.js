@@ -19,6 +19,7 @@ module.exports = (env, argv) => {
                 '@shared': path.resolve(__dirname, 'src/shared'),
                 '@entities': path.resolve(__dirname, 'src/entities'),
                 '@widgets': path.resolve(__dirname, 'src/widgets'),
+                '@providers': path.resolve(__dirname, 'src/providers'),
             },
         },
         module: {
