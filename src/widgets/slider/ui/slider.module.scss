@@ -57,11 +57,7 @@
 
 .swiperWrapper {
   position: relative;
-  height: 10rem;
-
-  @media (min-width: $xl) {
-    height: auto;
-  }
+  height: 12rem;
 }
 
 .prevButton,
