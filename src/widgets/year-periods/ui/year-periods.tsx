@@ -6,8 +6,6 @@ import scss from './year-period.module.scss';
 export function YearPeriods() {
   const { activeValue, length } = useData();
 
-  console.log(activeValue.startYear, activeValue.endYear);
-
   return (
     <article className={scss.container}>
       <div className={`container ${scss.years}`}>

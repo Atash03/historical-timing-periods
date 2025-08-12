@@ -14,12 +14,10 @@
   }
 }
 
-.circle {
+.circleContainer {
   position: relative;
-  width: clamp(18.75rem, 50vw, 33.125rem);
-  height: clamp(18.75rem, 50vw, 33.125rem);
-  border: 1px solid rgba($text-color, 0.2);
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

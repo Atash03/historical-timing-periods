@@ -16,10 +16,12 @@
     font-size: clamp(1.25rem, 5vw, 3.5rem);
     line-height: 120%;
     width: min(22rem, 7.7rem);
+    opacity: 0;
 }
 
 .titleLine {
     display: none;
+    height: 0;
 
     @media (min-width: $xl) {
         display: inline-block;

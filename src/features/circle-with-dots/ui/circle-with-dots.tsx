@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import type React from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { CircleWithDotsProps } from '../types';
+import { Circle } from './circle';
 import scss from './circle-with-dots.module.scss';
 
 export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) => {
@@ -101,7 +102,8 @@ export const CircleWithDots: React.FC<CircleWithDotsProps> = ({ numberOfDots }) 
 
   return (
     <div className={scss.container}>
-      <div className={scss.circle}>
+      <div className={scss.circleContainer}>
+        <Circle />
         <div ref={dotsContainerRef} className={scss.dotsContainer}>
           {dots}
         </div>

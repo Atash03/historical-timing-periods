@@ -1,9 +1,20 @@
 import { useData } from '@/providers/data-provider';
 import { CaretIcon } from '@/shared/icons/caret';
+import gsap from 'gsap';
+import { useEffect } from 'react';
 import scss from './nav-controls.module.scss';
 
 export function NavControls() {
   const { activeIndex, length, previousYears, nextYears, goToYear } = useData();
+
+  useEffect(() => {
+    gsap.to(`.${scss.controls}`, {
+      opacity: 1,
+      duration: 0.5,
+      delay: 0.5,
+      ease: 'power2.out',
+    });
+  }, []);
 
   return (
     <div className={scss.controls}>

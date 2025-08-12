@@ -1,20 +1,20 @@
 import { SliderItem } from '@/entities/slider-item';
 import { NavControls } from '@/features/nav-controls';
+import { useData } from '@/providers/data-provider';
 import { CaretIcon } from '@/shared/icons/caret';
+import { gsap } from 'gsap';
+import { useEffect, useRef, useState } from 'react';
 import { FreeMode, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import scss from './slider.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useData } from '@/providers/data-provider';
-import { gsap } from 'gsap'; // Added gsap import
-import { useEffect, useRef, useState } from 'react'; // Added useState
 
 export function Slider() {
   const { activeValue, activeIndex } = useData();
   const swiperWrapperRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [displayedPeriods, setDisplayedPeriods] = useState(activeValue.periods); // New state
+  const [displayedPeriods, setDisplayedPeriods] = useState(activeValue.periods);
 
   useEffect(() => {
     if (swiperWrapperRef.current) {
@@ -46,6 +46,7 @@ export function Slider() {
       <div className={scss.sliderContainer}>
         <div ref={swiperWrapperRef} className={scss.swiperWrapper}>
           <Swiper
+            key={displayedPeriods.map((el) => el.year).join('-')}
             slidesPerView={'auto'}
             spaceBetween={25}
             freeMode={true}
