@@ -47,9 +47,17 @@
    pnpm build:dev
   ```
 
+   ## 🏗️ Start
+  
+  Start an application:
+  ```bash
+   pnpm start
+  ```
+
   ## 📝 Available Scripts
   
   - `pnpm dev` - Start development server
+  - `pnpm start` - Start the application
   - `pnpm build` - Build for production
   - `pnpm build:dev` - Build for development
   - `pnpm lint` - Run linter
