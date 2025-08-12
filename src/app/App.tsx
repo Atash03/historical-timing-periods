@@ -1,8 +1,8 @@
 import { DataProvider } from '@/providers/data-provider';
+import { data } from '@/shared/mock/data';
 import { Header } from '@/widgets/header';
 import { Slider } from '@/widgets/slider';
 import { YearPeriods } from '@/widgets/year-periods';
-import { data } from '../../public/mock/data';
 import scss from './app.module.scss';
 
 const App = () => {
