@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 
 export function Slider({ items }: SliderProps) {
   return (
-    <article className={`${scss.sliderContainer}`}>
+    <article className={`${scss.container}`}>
       <div className="container">
         <div className={`${scss.line}`} />
       </div>

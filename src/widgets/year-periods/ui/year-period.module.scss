@@ -1,11 +1,27 @@
+@use "@shared/styles/vars" as *;
+
 .container {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .years {
   display: flex;
   gap: max(7vw, 2rem);
   width: fit-content;
+}
+
+.line {
+  display: none;
+
+  @media (min-width: $xl) {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(#42567a, 0.1);
+  }
 }
