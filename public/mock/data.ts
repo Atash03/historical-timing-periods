@@ -1,5 +1,6 @@
 export const data = [
     {
+        title: "Nauka",
         startYear: 1990,
         endYear: 1995,
         periods: [
@@ -30,6 +31,7 @@ export const data = [
         ]
     },
     {
+        title: "1999-2004",
         startYear: 1999,
         endYear: 2004,
         periods: [
@@ -60,6 +62,7 @@ export const data = [
         ]
     },
     {
+        title: "2015-2022",
         startYear: 2015,
         endYear: 2022,
         periods: [

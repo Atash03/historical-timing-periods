@@ -11,13 +11,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export function Slider() {
-  const { activeValue, activeIndex } = useData();
+  const { activeValue } = useData();
   const swiperWrapperRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [displayedPeriods, setDisplayedPeriods] = useState(activeValue.periods);
 
   useEffect(() => {
-    if (swiperWrapperRef.current) {
+    if (swiperWrapperRef.current && containerRef.current) {
       const tl = gsap.timeline();
 
       tl.to([swiperWrapperRef.current, containerRef.current], {
@@ -40,7 +40,7 @@ export function Slider() {
   return (
     <article className={`${scss.container}`}>
       <div ref={containerRef} className={`container ${scss.header}`}>
-        <h1>{activeIndex}</h1>
+        <h1>{activeValue.title}</h1>
         <div className={`${scss.line}`} />
       </div>
       <div className={scss.sliderContainer}>

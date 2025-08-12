@@ -1,10 +1,5 @@
 @use "@/shared/styles/vars" as *;
 
-.buttonsContainer {
-  display: flex;
-  gap: 0.5rem;
-}
-
 .controls {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -19,7 +14,12 @@
 }
 
 .navigation {
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .navButton {
@@ -50,8 +50,8 @@
 
 .caretIcon {
   @media (min-width: $md) {
-    width: 10.25px;
-    height: 12.25px !important;
+    width: 0.64rem;
+    height: 0.64rem !important;
   }
 }
 
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-self: center;
-  gap: 10px;
+  gap: 0.625rem;
 
   @media (min-width: $xl) {
     display: none;
@@ -67,8 +67,8 @@
 }
 
 .customBullet {
-  width: 6px !important;
-  height: 6px !important;
+  width: 0.375rem !important;
+  height: 0.375rem !important;
   border-radius: 50%;
   background-color: $text-color !important;
   opacity: 0.5;
@@ -79,7 +79,7 @@
   }
 
   @media (min-width: $md) {
-    width: 8px !important;
-    height: 8px !important;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
   }
 }

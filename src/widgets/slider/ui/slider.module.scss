@@ -68,7 +68,7 @@
 .nextButton {
   display: none;
 
-  @media screen and (min-width: $xl) {
+  @media (min-width: $xl) {
     display: flex;
     align-items: center;
     justify-content: center;

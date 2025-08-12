@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import scss from './circle.module.scss';
 
 export function Circle() {
-  const circleRef = useRef<SVGCircleElement | null>(null);
+  const circleRef = useRef<SVGCircleElement>(null);
 
   useEffect(() => {
     if (!circleRef.current) return;

@@ -9,13 +9,12 @@ export function YearDisplay({ color, year }: YearDisplayProps) {
   const digits = String(year).split('');
 
   useEffect(() => {
-    const currentDigits = String(year).split('');
     const prevDigits = String(prevYearRef.current).split('');
     const digitElements = yearRef.current?.querySelectorAll(`.${scss.digit}`);
 
     if (digitElements) {
       digitElements.forEach((el, i) => {
-        const currentDigit = currentDigits[i];
+        const currentDigit = digits[i];
         const prevDigit = prevDigits[i];
 
         if (currentDigit !== prevDigit) {
@@ -33,7 +32,7 @@ export function YearDisplay({ color, year }: YearDisplayProps) {
     }
 
     prevYearRef.current = year;
-  }, [year]);
+  }, [year, digits]);
 
   return (
     <h1 ref={yearRef} className={`${scss.year} ${scss[color]}`}>

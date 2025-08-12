@@ -2,6 +2,7 @@
 export interface Data {
   startYear: number;
   endYear: number;
+  title: string;
   periods: Period[];
 }
 
