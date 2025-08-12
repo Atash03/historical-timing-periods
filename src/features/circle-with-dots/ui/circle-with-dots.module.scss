@@ -51,8 +51,8 @@
   @extend .dot;
   width: 3.5rem;
   height: 3.5rem;
-  background-color: white;
-  border: 1px solid $text-color;
+  background-color: $main-bg-color;
+  border: 1px solid rgba($text-color, 0.5);
   margin: -1.75rem;
   display: flex;
   justify-content: center;
@@ -64,8 +64,8 @@
   @extend .dot;
   width: 3.5rem;
   height: 3.5rem;
-  background-color: white;
-  border: 1px solid $text-color;
+  background-color: $main-bg-color;
+  border: 1px solid rgba($text-color, 0.5);
   margin: -1.75rem;
   display: flex;
   justify-content: center;

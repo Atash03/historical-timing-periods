@@ -14,14 +14,20 @@
   }
 }
 
-.line {
-  height: 1px;
-  width: 100%;
-  background-color: $line-color;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 
   @media (min-width: $xl) {
     display: none;
   }
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: $line-color;
 }
 
 .sliderContainer {
@@ -32,7 +38,7 @@
   max-width: $max-width;
   width: 100%;
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $xl) {
     gap: 3.5rem;
 
     &>.swiperWrapper {
@@ -51,6 +57,11 @@
 
 .swiperWrapper {
   position: relative;
+  height: 10rem;
+
+  @media (min-width: $xl) {
+    height: auto;
+  }
 }
 
 .prevButton,
@@ -68,7 +79,7 @@
     height: 2.5rem;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px 0px #0000001a;
+    box-shadow: 0px 0px 15px 0px rgba($secondary-blue, 0.1);
     z-index: 10;
     cursor: pointer;
     border: none;
@@ -79,14 +90,19 @@
   }
 }
 
+.caretIcon {
+  width: 0.55rem;
+  height: 0.625rem;
+}
+
 .prevButton {
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $xl) {
     left: -3.75rem;
   }
 }
 
 .nextButton {
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $xl) {
     right: -3.75rem;
   }
 }

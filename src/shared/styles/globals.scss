@@ -14,6 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: $text-color;
+  background-color: $main-bg-color;
 
   @media (min-width: $max-width) {
     display: flex;

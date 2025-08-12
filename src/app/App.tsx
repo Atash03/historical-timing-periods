@@ -11,7 +11,7 @@ const App = () => {
       <section className={scss.main}>
         <Header />
         <YearPeriods />
-        <Slider items={data[0].periods} />
+        <Slider />
         <div className={scss.line} />
         <div className={`${scss.line} ${scss.lineLeft}`} />
         <div className={`${scss.line} ${scss.lineRight}`} />
