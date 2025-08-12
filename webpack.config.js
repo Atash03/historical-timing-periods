@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
             path: path.resolve(__dirname, 'dist'),
             filename: isProduction ? '[name].[contenthash].js' : '[name].js',
             clean: true,
-            publicPath: '/',
+            publicPath: '',
         },
         resolve: {
             extensions: ['.tsx', '.ts', '.js', '.jsx'],
@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.tsx?$/,
+                    test: /\.(ts|tsx)$/i,
                     use: 'ts-loader',
                     exclude: /node_modules/,
                 },
@@ -79,7 +79,7 @@ module.exports = (env, argv) => {
         plugins: [
             new HtmlWebpackPlugin({
                 template: './public/index.html',
-                // favicon: './public/favicon.ico', // Uncomment when you add favicon.ico
+                favicon: './public/favicon.ico'
             }),
         ],
         devServer: {
@@ -106,5 +106,3 @@ module.exports = (env, argv) => {
         devtool: isProduction ? 'source-map' : 'eval-source-map',
     };
 };
-
-// okay give me recommendation for the project based on the modern and scalable development (don't implement any code)

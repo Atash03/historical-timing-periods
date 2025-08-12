@@ -7,8 +7,8 @@ export function Header() {
     gsap.to(`.${scss.titleLine}`, {
       height: 130,
       duration: 1,
-      ease: 'power2.out',
       delay: 0.5,
+      ease: 'power2.out',
       onComplete: () => {
         gsap.to(`.${scss.title}`, {
           opacity: 1,
